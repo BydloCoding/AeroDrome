@@ -4,6 +4,8 @@ import re
 
 import vk_api
 
+import traceback
+
 
 class User(object):
     # method to insert keyword map
@@ -17,8 +19,12 @@ class User(object):
     def write(self, message, keyboard=None, **kwargs):
         if keyboard is not None:
             kwargs["keyboard"] = Keyboard.byKeyboard(keyboard)
-        return self._vk.messages.send(user_id=self.id, message=message, random_id=vk_api.utils.get_random_id(),
+        try:
+            return self._vk.messages.send(user_id=self.id, message=message, random_id=vk_api.utils.get_random_id(),
                                       **kwargs)
+        except:
+            traceback.print_exc()
+            return
 
     @property
     def user_name(self):

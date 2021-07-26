@@ -4,5 +4,8 @@
     "db_backups_folder": "backups/",
     "db_backup_interval": 43200,
     "sync_timezone": "Asia/Aden",
-    "vk_api_key": ""
+    "qiwi_wallet": "",
+    "qiwi_api_key": "",
+    "vk_api_key": "",
+    "voucher_users": 100
 }
