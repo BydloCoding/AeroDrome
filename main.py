@@ -131,6 +131,7 @@ class Main(object):
                     self.reply(f"✅Вы успешно активировали ваучер, на ваш баланс зачислено {generated_money}🧷")
                     user_profile = self.database.select_one_struct("select * from users where user_id = ?", [self.user.id])
                     user_profile.paper_clips += generated_money
+                    self.db.execute("delete from voucher where user_id = ?", [self.user.id])
                 else:
                     cmd.execute_command(self)
 

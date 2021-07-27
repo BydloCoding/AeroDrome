@@ -24,6 +24,36 @@ airplanes = [
         "level": 1,
         "per_hour": 100,
         "price": 1000
+    },
+    {
+        "id": 1,
+        "level": 2,
+        "per_hour": 600,
+        "price": 5000
+    },
+    {
+        "id": 2,
+        "level": 3,
+        "per_hour": 3200,
+        "price": 25_000
+    },
+    {
+        "id": 3,
+        "level": 4,
+        "per_hour": 14_000,
+        "price": 100_000
+    },
+    {
+        "id": 4,
+        "level": 5,
+        "per_hour": 80_000,
+        "price": 500_000
+    },
+    {
+        "id": 5,
+        "level": 6,
+        "per_hour": 200_000,
+        "price": 1_000_000
     }
 ]
 
