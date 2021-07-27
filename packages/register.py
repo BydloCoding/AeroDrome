@@ -188,7 +188,7 @@ def handle_convert(self):
         user_profile = self.db.select_one_struct("select * from users where user_id = ?", [self.user.id])
         paper_clips = user_profile.paper_clips
         gained = paper_clips // 100
-        user_profile.keys = gained
+        user_profile.keys += gained
         user_profile.paper_clips -= gained * 100
         self.reply(f"Вы получили {gained} ключей🔑 взамен на {gained * 100} скрепок", keyboard=menu_kb)
         self.set_after("handle_menu")
